@@ -20,5 +20,14 @@
       Super.add(T newValue);
       }
   }
+  public void add(int index, T newValue){
+   if(newValue == null){
+     throw new IllegalArgumentException("Illegal Argument" + newValue);
+   }
+   else{
+     Super.add(index, newValue);
+   }
+ }
+
 
 }
