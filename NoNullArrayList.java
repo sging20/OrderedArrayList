@@ -1,32 +1,22 @@
-  import java.util.*
+  import java.util.ArrayList;
   public class NoNullArrayList<T> extends ArrayList<T>{
-  private T value;
-  public NoNullArrayList{
-
+  public NoNullArrayList(){
+    super();
   }
-  public void setValue(T newValue, int index){
-      if(newValue == null){
-        throw new IllegalArgumentException("Illegal Argument" + newValue);
-      }
-      if(newValue != null){
-        Super.set(index, newValue);
-      }
-  }
-  public void add(T newValue){
+    public NoNullArrayList(int initialCapacity){
+      super(initialCapacity);
+    }
+  public boolean add(T newValue){
     if(newValue == null){
       throw new IllegalArgumentException("Illegal Argument" + newValue);
     }
-      else{
-      Super.add(T newValue);
-      }
+    return super.add(newValue);
   }
   public void add(int index, T newValue){
    if(newValue == null){
      throw new IllegalArgumentException("Illegal Argument" + newValue);
    }
-   else{
-     Super.add(index, newValue);
-   }
+      super.add(index, newValue);
  }
 
 
