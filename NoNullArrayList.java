@@ -6,6 +6,12 @@
     public NoNullArrayList(int initialCapacity){
       super(initialCapacity);
     }
+  public T set(int index, T newValue){
+      if(newValue == null){
+        throw new IllegalArgumentException("Illegal Argument" + newValue);
+      }
+      return super.set(index, newValue);
+  }
   public boolean add(T newValue){
     if(newValue == null){
       throw new IllegalArgumentException("Illegal Argument" + newValue);
