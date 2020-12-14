@@ -30,4 +30,11 @@ public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T
       super.add(sort(element), element);
   }
 
+  public boolean add(T element){
+    if(element == null){
+      throw new IllegalArgumentException("Illegal Argument" + element);
+    }
+      super.add(sort(element), element);
+      return true;
+
 }
